@@ -26,7 +26,27 @@ month={}}
 </p>
 </details>
 
-<details><summary>[2] F. T. Tehrani, S. Abbasi, "A model-based decision support system for critiquing mechanical ventilation treatments," Journal of Clinical Monitoring and Computing, 2012, pp. 207-215. DOI 10.1007/s10877-012-9362-0</summary>
+<details><summary>[2] J. J. Batzel, Franz Kappel, Daniel Schneditz, Hien T. Tran, "Cardiovascular and Respiratory Systems: Modeling, Analysis, and Control" Society for Industrial and Applied Mathematics, 2007. ISBN-13=978-0-898716-17-7</summary>
+<p>
+
+```
+@INPROCEEDINGS{8916835, 
+author={F. T. {Tehrani} and S. {Abbasi}},
+journal={Society for Industrial and Applied Mathematics},
+title={Cardiovascular and Respiratory Systems: Modeling, Analysis, and Control}, 
+year={2007}, 
+volume={}, 
+number={}, 
+pages={}, 
+keywords={}, 
+ISBN-13={978-0-898716-17-7}, 
+month={}}
+```
+
+</p>
+</details>
+
+<details><summary>[3] F. T. Tehrani, S. Abbasi, "A model-based decision support system for critiquing mechanical ventilation treatments," Journal of Clinical Monitoring and Computing, 2012, pp. 207-215. DOI 10.1007/s10877-012-9362-0</summary>
 <p>
 
 ```
@@ -46,22 +66,4 @@ month={}}
 </p>
 </details>
 
-<details><summary>[3] J. J. Batzel, Franz Kappel, Daniel Schneditz, Hien T. Tran, "Cardiovascular and Respiratory Systems: Modeling, Analysis, and Control" Society for Industrial and Applied Mathematics, 2007. ISBN-13=978-0-898716-17-7</summary>
-<p>
 
-```
-@INPROCEEDINGS{8916835, 
-author={F. T. {Tehrani} and S. {Abbasi}},
-journal={Society for Industrial and Applied Mathematics},
-title={Cardiovascular and Respiratory Systems: Modeling, Analysis, and Control}, 
-year={2007}, 
-volume={}, 
-number={}, 
-pages={}, 
-keywords={}, 
-ISBN-13={978-0-898716-17-7}, 
-month={}}
-```
-
-</p>
-</details>
