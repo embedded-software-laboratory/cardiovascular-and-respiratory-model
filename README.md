@@ -5,12 +5,12 @@ The model is implemented using MATLAB/Simulink and is based on existing models f
 
 ### References
 
-<details><summary>[1] In progress... </summary>
+<details><summary>[1] S. Fonck, S. Fritsch, S. Kowalewski, R. Hensen and A. {Stollenwerk}, "Algorithmic distinction of ARDS and Heart Failure in ICU data from medical embedded systems by using a computer model" </summary>
 <p>
 
 ```
 @INPROCEEDINGS{8916835, 
-author={S. {Fonck} and S. {Fritsch}}, 
+author={S. {Fonck} and S. {Fritsch} and S. {Kowalewski} and R. {Hensen} and A. {Stollenwerk}}, 
 booktitle={}, 
 title={Algorithmic distinction of ARDS and Heart Failure in ICU data from medical embedded systems by using a computer model}, 
 year={2021}, 
@@ -25,22 +25,22 @@ month={}}
 
 </p>
 </details>
-<details><summary>[2] F. T. Tehrani, S. Abbasi, "A model-based decision support system for critiquing mechanical ventilation treatments," 2012 IEEE Intelligent Transportation Systems Conference (ITSC), Auckland, New Zealand, 2019, pp. 443-448.
+<details><summary>[2] F. T. Tehrani, S. Abbasi, "A model-based decision support system for critiquing mechanical ventilation treatments," Journal of Clinical Monitoring and Computing, 2012, pp. 207-215.
 DOI 10.1007/s10877-012-9362-0</summary>
 <p>
 
 ```
 @INPROCEEDINGS{8916835, 
-author={F. T. {Tehrani} and S. {Abbasi}}, 
+author={F. T. {Tehrani} and S. {Abbasi}},
+journal={Journal of Clinical Monitoring and Computing},
 title={A model-based decision support system for critiquing mechanical ventilation treatments}, 
-year={2019}, 
-volume={}, 
+year={2012}, 
+volume={26}, 
 number={}, 
-pages={}, 
+pages={207-215}, 
 keywords={Decision support systems; Mechanical ventilation; Physiological modeling}, 
 doi={10.1007/s10877-012-9362-0}, 
-ISSN={null}, 
-month={Oct},}
+month={}}
 ```
 
 </p>
