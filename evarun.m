@@ -1,8 +1,9 @@
 function evarun(runtype, i0, i1)
-% Fuehrt die Simulation durch und generiert Graphen
-% runtype: String aus ['eva1', 'eva2', 'eva2-long']
-% i0: Zeilennummer des ersten Patienten
-% i1: Zeilennummer des letzten Patienten
+% evarun starts the simulation and will plot the results in the folder
+% 'plots' (this has to be created beforehand)
+% runtype: String ['evaluation-fixed/short/medium/verylong']
+% i0: row number of first patient
+% i1: row number of second patient
 
     %[data, data_pao2] = EVA2DATA();
     [data] = evaluationData();
@@ -10,35 +11,33 @@ function evarun(runtype, i0, i1)
     c=0;
   
     % check which evaluation runtype is defined
-    % eva1 = fixed parameters in "initptin.m"
-    % eva2 = testdata from "evaluationData.m"
-    if strcmp(runtype, 'evaluation-fix')
+    % evaluation-fixed = fixed parameters in "initptin.m"
+    % evaluation-classification = testdata from "evaluationData.m"
+    if strcmp(runtype, 'evaluation-fixed')
         tmax = 600;
-        runtype = 'eva1';
+        runtype = 'evaluation-fixed';
     elseif strcmp(runtype, 'evaluation-short')
         tmax = 600;
-        runtype = 'eva2';
-    elseif strcmp(runtype, 'evaluation-middle')
-        tmax = 18000;
-        runtype = 'eva2';
-    elseif strcmp(runtype, 'evaluation-verylong')
+        runtype = 'evaluation-classification';
+    elseif strcmp(runtype, 'evaluation-medium')
+        tmax = 1800;
+        runtype = 'evaluation-classification';
+    elseif strcmp(runtype, 'evaluation-long')
         tmax = 36000;
-        runtype = 'eva2';
+        runtype = 'evaluation-classification';
     end
 
     clearvars ptruns out;
     ptruns(21) = struct;
-    %M = zeros(n, 20);
 
     for i=i0:i1
         ptruns(i).runtype = runtype;
         ptruns(i).tmax = tmax;
-        if strcmp(ptruns(i).runtype, 'eva2')
+        if strcmp(ptruns(i).runtype, 'evaluation-classification')
             ptruns(i).patientid = data(i,1);
             if data(i,2) == 1
                 ptruns(i).dia = 'ards';
-            end
-            if data(i,3) == 1
+            elseif data(i,3) == 1
                 ptruns(i).dia = 'hf';
             end
         else
@@ -53,7 +52,7 @@ function evarun(runtype, i0, i1)
         
         % exclude by:
         exclude = false;
-        if strcmp(runtype, 'eva2')
+        if strcmp(runtype, 'evaluation-classification')
             %    - tidal volume
             exclude = exclude || (data(i,18) > 1);
             %    - breathing frequency
@@ -77,7 +76,7 @@ function evarun(runtype, i0, i1)
             ptruns(i).scores.pFon = out.logFon_score;
             ptruns(i).scores.Psystas = out.Psystas;
             ptruns(i).scores.Pdiastas = out.Pdiastas;
-            ptruns(i).scores.y = out.y_score;
+            ptruns(i).scores.Phf = out.Phf_score;
 
             % generate plots
             fprintf('Rendering plots...\n');
@@ -91,12 +90,12 @@ function evarun(runtype, i0, i1)
             evaplot(ptruns(i), 'rajan', true, false);
             evaplot(ptruns(i), 'hfc2', true, false);
             evaplot(ptruns(i), 'lef', true, false);
-            evaplot(ptruns(i), 'y', true, false);
+            evaplot(ptruns(i), 'Phf', true, false);
         end
     end
     assignin('base', 'ptruns', ptruns);
     path = ['runs/run-',runtype,'-',datestr(now, 'yyyymmdd-HHMMSS'),'.mat'];
-    if strcmp(ptruns(i).runtype, 'eva1')
+    if strcmp(ptruns(i).runtype, 'evaluation-fixed')
         ptrun = ptruns(1);
         save(path, 'ptrun');
     else

@@ -129,11 +129,11 @@ function evaplot(ptrun, plottype, saveplot, openplot)
     end
     
     % ---------- KLASSIFIKATION: y-Score -------------------------------
-    if strcmp(plottype, 'y')
-        plot(ptrun.scores.y,'LineWidth',linewidth,'Color','black');
+    if strcmp(plottype, 'Phf')
+        plot(ptrun.scores.Phf,'LineWidth',linewidth,'Color','black');
         ylim([0,1]);
-        ylabel('y-Score');
-        lgd=legend('y-Score');
+        ylabel('Phf-Score');
+        lgd=legend('Phf-Score');
     end
     
     % ----- x axis
@@ -143,10 +143,12 @@ function evaplot(ptrun, plottype, saveplot, openplot)
     if tmax == 600
         xticks([0 60 120 180 240 300 360 420 480 540 600]);
         xticklabels({'0','','','','','5','','','','','10'});
-    end
-    if tmax == 1800
+    elseif tmax == 1800
         xticks([0 300 600 900 1200 1500 1800]);
         xticklabels({'0','','10','','20','','30'});
+    elseif tmax == 36000
+        xticks([0 6000 12000 18000 24000 30000 36000]);
+        xticklabels({'0','','200','','400','','600'});
     end
     set(gca, 'FontSize', axisFontSize, 'YGrid', 'on', 'XGrid', 'off');
 %     set(gca, 'FontSize', axisFontSize, 'YGrid', 'on', 'XGrid', 'off', 'YMinorGrid', 'on');

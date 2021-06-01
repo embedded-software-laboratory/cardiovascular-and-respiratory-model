@@ -1,0 +1,49 @@
+
+PatientInput
+	age
+	female
+	black
+	height			m
+	weight			kg
+	ABP				mmHg
+	CVP				mmHg
+	PAP				mmHg
+	PAWP			mmHg
+	H				1/min
+	PaO2			mmHg
+	PaCO2			mmHg
+	FiO2			1
+	f				1/min
+	VT				L
+	PEEP			mbar
+	Pinsp			mbar
+	cRS				mL/mbar
+	BNP				pg/mL
+	NTproBNP		pg/mL
+	Hb				g/dL
+	Scr				mg/dL
+	BUN				mg/dL
+
+PatientState
+	CardioVascularStateExtended
+		P_ (as, vs, ap, vp)
+		Q_ (L, R, s, p)
+		ventricleInfo_ (L, R)
+			Vdiast
+			Vsyst
+			Vstr
+			EF
+			SI
+			HI
+		S_ (L, R)
+		R_ (s, p)
+		_RVI (s, p)
+		H
+	RespiratoryStateExtended
+		horowitz
+		_am_ (P_O2, C_O2, P_CO2, C_CO2)
+		_v_ (P_O2, C_O2, P_CO2, C_CO2)
+		_a_ (P_O2, C_O2, P_CO2, C_CO2)
+		_vB_ (P_O2, C_O2, P_CO2, C_CO2)
+		_vT_ (P_O2, C_O2, P_CO2, C_CO2)
+

@@ -1,7 +1,7 @@
 function res = initptin(runtype, data, i)
     
     ptin = struct;
-    if strcmp(runtype, 'eva2')
+    if strcmp(runtype, 'evaluation-classification')
         row = data(i,:);
         
         % variable initialization
@@ -31,7 +31,7 @@ function res = initptin(runtype, data, i)
         ptin.cRS = busts(0);                   % nA
     end
     
-    if strcmp(runtype, 'eva1')
+    if strcmp(runtype, 'evaluation-fixed')
         age = 45;
         ptin.age = busts(age);                  % ---
         ptin.female = busts(false);             % ---
