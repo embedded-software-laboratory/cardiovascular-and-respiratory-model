@@ -3,9 +3,13 @@ This repository contains a model of the cardiovascular and respiratory system, w
 
 The model is implemented using MATLAB/Simulink and is based on existing models from literature. The cardiovascular system is based on preceding works by Batzel et al. [2]. The respiratory system was initially presented by Tehrani et al. [3].
 
+For a detailed documentation on how to use and start the model please see the documentation folder. 
+
+The model and associated interfaces are still being developed, as the project is still ongoing and additional features may be added in the future.
+
 ### References
 
-<details><summary>[1] S. Fonck, S. Fritsch, S. Kowalewski, R. Hensen and A. {Stollenwerk}, "Algorithmic distinction of ARDS and Heart Failure in ICU data from medical embedded systems by using a computer model" </summary>
+<details><summary>[1] S. Fonck, S. Fritsch, S. Kowalewski, R. Hensen and A. Stollenwerk, "Algorithmic distinction of ARDS and Heart Failure in ICU data from medical embedded systems by using a computer model" </summary>
 <p>
 
 ```
