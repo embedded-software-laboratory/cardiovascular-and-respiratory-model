@@ -7,6 +7,10 @@ For a detailed documentation on how to use and start the model please see the do
 
 The model and associated interfaces are still being developed, as the project is still ongoing and additional features may be added in the future.
 
+### Acknowledgements
+
+This research is part of the medical informatics initiative (https://www.medizininformatik-initiative.de/en/), in particular the SMITH project (https://www.smith.care/home-2/) and is supported by the German Federal Ministry of Education and Research, grant numbers: 01ZZ1803K.
+
 ### References
 
 <details><summary>[1] S. Fonck, S. Fritsch, S. Kowalewski, R. Hensen and A. Stollenwerk, "Algorithmic distinction of ARDS and Heart Failure in ICU data from medical embedded systems by using a computer model" </summary>
