@@ -1,5 +1,0 @@
-keyring
-sshtunnel
-mysql-connector-python
-pandas
-matlab
